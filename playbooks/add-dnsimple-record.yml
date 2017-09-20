@@ -1,0 +1,11 @@
+- name: adding record "{{ name }}"
+  hosts: localhost
+  tasks:
+    - dnsimple:
+        domain: "{{ domain }}"
+        record: "{{ name }}"
+        type: "{{ type }}"
+        value: "{{ ip }}"
+        state: present
+      delegate_to: localhost
+      register: record

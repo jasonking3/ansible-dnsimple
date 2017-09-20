@@ -1,0 +1,11 @@
+- name: deleting record "{{ name }}"
+  hosts: localhost
+  tasks:
+    - dnsimple:
+        domain: "{{ domain }}"
+        record: "{{ name }}"
+        type: "{{ type }}"
+        value: "{{ ip }}"
+        state: absent
+      delegate_to: localhost
+      register: record
