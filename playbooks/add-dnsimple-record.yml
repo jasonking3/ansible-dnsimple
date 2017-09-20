@@ -1,5 +1,5 @@
 - name: adding record "{{ name }}"
-  hosts: localhost
+  hosts: all
   tasks:
     - dnsimple:
         account_email: "{{ email }}"
