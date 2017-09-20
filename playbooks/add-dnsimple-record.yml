@@ -9,5 +9,4 @@
         type: "{{ type }}"
         value: "{{ ip }}"
         state: present
-      delegate_to: localhost
       register: record

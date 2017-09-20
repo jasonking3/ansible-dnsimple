@@ -9,5 +9,4 @@
         type: "{{ type }}"
         value: "{{ ip }}"
         state: absent
-      delegate_to: localhost
       register: record
