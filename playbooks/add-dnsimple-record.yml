@@ -2,6 +2,8 @@
   hosts: localhost
   tasks:
     - dnsimple:
+        account_email: "{{ email }}"
+        account_api_token: "{{ token }}"    
         domain: "{{ domain }}"
         record: "{{ name }}"
         type: "{{ type }}"
